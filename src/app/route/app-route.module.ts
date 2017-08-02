@@ -5,8 +5,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { StrummingComponent } from './../strumming/strumming.component';
 
 const appRoutes: Routes = [
-    { path: 'strumming', component: StrummingComponent },
     { path: '', redirectTo: '/strumming', pathMatch: 'full' },
+    { path: 'strumming', component: StrummingComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -17,6 +17,9 @@ const appRoutes: Routes = [
     exports: [
         RouterModule
     ],
-    declarations: [PageNotFoundComponent]
+    declarations: [
+        PageNotFoundComponent,
+        StrummingComponent
+    ]
 })
 export class AppRoutingModule { }

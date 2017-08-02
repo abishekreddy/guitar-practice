@@ -1,0 +1,55 @@
+/*-----Colors-----*/
+
+/*Site colors*/
+$primary-color: white;
+$secondary-color: #575f7f;
+
+/*-----Fonts-----*/
+
+/*Font style*/
+$font-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+/*Font sizes*/
+$primary-font-size: 14px;
+
+/*Font size multipliers*/
+$xxs-font-multiplier: 0.5;
+$xs-font-multiplier: 0.85;
+$s-font-multiplier: 1.15;
+$m-font-multiplier: 1.3;
+$l-font-multiplier: 1.55;
+$xl-font-multiplier: 2;
+$xxl-font-multiplier: 2.55;
+
+/*
+    Font size multiplier reference:
+    $xxs-font-multiplier: 7px;
+    $xs-font-multiplier: 12px;
+    $s-font-multiplier: 16px;
+    $m-font-multiplier: 18px;
+    $l-font-multiplier: 22px;
+    $xl-font-multiplier: 30px;
+    $xxl-font-multiplier: 36px;
+*/
+
+/*Font colors*/
+$primary-font-color: black;
+$secondary-font-color: white;
+
+/*Font weights*/
+$light-font: 300;
+$semi-light-font: 400;
+$semi-bold-font: 600;
+$bold-font: 700;
+
+/*-----Other-----*/
+
+/*Device support*/
+$min-height: 568px;
+$min-width: 320px;
+
+/*Animation*/
+$primary-animation-duration: 0.5s;
+
+/*Element styles*/
+$primary-element-dimension: 45px;

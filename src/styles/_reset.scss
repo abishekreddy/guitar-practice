@@ -1,0 +1,99 @@
+/*Remove default browser styling*/
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, a, b, u, i, img, ol, ul, li, form, label,
+table, tbody, tfoot, thead, tr, th, td,
+canvas, input, button, select, textarea {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0; 
+    vertical-align: baseline;
+}
+
+/*Box Sizing*/
+html, body, div, form, p, a, h1, h2, h3, h4, h5, h6, ul, ol, li, table, thead, tbody, tr, td, textarea, select, button, input[type="text"], [type="checkbox"], [type="search"], [type="button"], .border-box {
+    /*Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1*/
+    box-sizing: border-box;
+    /*Firefox ≤ 28*/
+    -moz-box-sizing: border-box;
+    /*Android ≤ 2.3, iOS ≤ 4*/
+    -webkit-box-sizing: border-box;
+}
+
+/*
+    Remove the border on images inside links in IE 10-.
+    Restrict max size to image base size
+*/
+img {
+    border-style: none;
+    max-width: 100%;
+}
+
+/*Adjust input styling*/
+button,
+input,
+select,
+textarea {
+    line-height: 1;
+    text-transform: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+/*-----Browser specific resets-----*/
+
+/*
+    Remove the gray background on active links in IE 10.
+    Remove gaps in links underline in iOS 8+ and Safari 8+.
+*/
+a {
+    background-color: transparent;
+    text-decoration: none;
+    text-decoration-skip: objects;
+}
+
+/*
+    Correct the odd appearance in Chrome and Safari.
+    Correct the outline style in Safari.
+*/
+[type="search"] {
+    outline-offset: -2px;
+    -webkit-appearance: textfield;
+}
+
+/*Correct the inability to style clickable types in iOS and Safari.*/
+button,
+html [type="button"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/*Remove the inner border and padding in Firefox.*/
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/*Restore the focus styles unset by the previous rule.*/
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/*Fix iOS drop-shadow issue*/
+input[type=text] {
+    -webkit-appearance: none;
+}
+
+/*Add the correct display in IE 10-.*/
+[hidden] {
+    display: none;
+}
