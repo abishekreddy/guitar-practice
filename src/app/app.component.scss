@@ -1,0 +1,57 @@
+@import "../styles/_mixins.scss";
+
+/*-----Navbar-----*/
+
+#body {
+  height: 100%;
+  padding: 20px;
+}
+
+@media screen and (max-width: $desktop-min-width) {
+  #body {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $desktop-min-width) {
+  #body {
+    /*Adjusting for navbar*/
+    left: 60px;
+    position: absolute;
+    width: calc(100% - 60px);
+  }
+}
+
+
+/*-----Navbar-----*/
+
+#navbar {
+  @include setTransition(width .2s linear);
+  background: $secondary-color;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+
+@media screen and (max-width: $desktop-min-width) {
+  #navbar {
+    /*Hiding navbar when not open. Additional 5px to hide box shadow*/
+    left: -255px;
+    width: 250px;
+    &.open {
+      left: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-min-width) {
+  #navbar {
+    /*Adjusting for navbar*/
+    left: 0;
+    width: 60px;
+    &:hover {
+      width: 250px;
+    }
+  }
+}

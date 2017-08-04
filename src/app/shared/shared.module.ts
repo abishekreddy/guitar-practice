@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 
-import { SpinnerComponent } from './spinner/spinner.component';
+import { AppSpinnerComponent } from './app-spinner/app-spinner.component';
 
 @NgModule({
   imports: [],
-  declarations: [SpinnerComponent],
-  exports: [SpinnerComponent]
+  declarations: [AppSpinnerComponent],
+  exports: [AppSpinnerComponent]
 })
 export class SharedModule { }

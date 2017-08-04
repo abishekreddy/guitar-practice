@@ -1,72 +1,83 @@
-.spinner-container {
+@import "../../../styles/_variables.scss";
+
+/*-----Spinner-----*/
+
+#spinner-container {
   left: 50%;
   margin: auto -50px;
   position: absolute;
   top: 50%;
 }
 
-.swing div {
+#spinner-background {
+  background-color: $primary-color;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+#swing div {
   border-radius: 50%;
   float: left;
   height: 1em;
   width: 1em;
 }
 
-.swing div:nth-of-type(1) {
+#swing div:nth-of-type(1) {
   background: -webkit-linear-gradient(left, #385c78 0%, #325774 100%);
   background: linear-gradient(to right, #385c78 0%, #325774 100%);
 }
 
-.swing div:nth-of-type(2) {
+#swing div:nth-of-type(2) {
   background: -webkit-linear-gradient(left, #325774 0%, #47536a 100%);
   background: linear-gradient(to right, #325774 0%, #47536a 100%);
 }
 
-.swing div:nth-of-type(3) {
+#swing div:nth-of-type(3) {
   background: -webkit-linear-gradient(left, #4a5369 0%, #6b4d59 100%);
   background: linear-gradient(to right, #4a5369 0%, #6b4d59 100%);
 }
 
-.swing div:nth-of-type(4) {
+#swing div:nth-of-type(4) {
   background: -webkit-linear-gradient(left, #744c55 0%, #954646 100%);
   background: linear-gradient(to right, #744c55 0%, #954646 100%);
 }
 
-.swing div:nth-of-type(5) {
+#swing div:nth-of-type(5) {
   background: -webkit-linear-gradient(left, #9c4543 0%, #bb4034 100%);
   background: linear-gradient(to right, #9c4543 0%, #bb4034 100%);
 }
 
-.swing div:nth-of-type(6) {
+#swing div:nth-of-type(6) {
   background: -webkit-linear-gradient(left, #c33f31 0%, #d83b27 100%);
   background: linear-gradient(to right, #c33f31 0%, #d83b27 100%);
 }
 
-.swing div:nth-of-type(7) {
+#swing div:nth-of-type(7) {
   background: -webkit-linear-gradient(left, #da3b26 0%, #db412c 100%);
   background: linear-gradient(to right, #da3b26 0%, #db412c 100%);
 }
 
-.shadow {
+#shadow {
   clear: left;
   padding-top: 1.5em;
 }
 
-.shadow div {
+#shadow div {
   -webkit-filter: blur(1px);
+  background: #e3dbd2;
+  border-radius: 50%;
   filter: blur(1px);
   float: left;
-  width: 1em;
   height: .25em;
-  border-radius: 50%;
-  background: #e3dbd2;
+  width: 1em;
 }
 
-.shadow .shadow-l {
+#shadow #shadow-l {
   background: #d5d8d6;
 }
 
-.shadow .shadow-r {
+#shadow #shadow-r {
   background: #eed3ca;
 }
 
@@ -174,22 +185,22 @@
   }
 }
 
-.swing-l {
+#swing-l {
   -webkit-animation: ball-l .425s ease-in-out infinite alternate;
   animation: ball-l .425s ease-in-out infinite alternate;
 }
 
-.swing-r {
+#swing-r {
   -webkit-animation: ball-r .425s ease-in-out infinite alternate;
   animation: ball-r .425s ease-in-out infinite alternate;
 }
 
-.shadow-l {
+#shadow-l {
   -webkit-animation: shadow-l-n .425s ease-in-out infinite alternate;
   animation: shadow-l-n .425s ease-in-out infinite alternate;
 }
 
-.shadow-r {
+#shadow-r {
   -webkit-animation: shadow-r-n .425s ease-in-out infinite alternate;
   animation: shadow-r-n .425s ease-in-out infinite alternate;
 }

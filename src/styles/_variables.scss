@@ -5,8 +5,14 @@
 
 /*Site colors*/
 
-$primary-color: white;
-$secondary-color: #575f7f;
+$primary-color: #f4f5f6;
+$secondary-color: #171d1f;
+
+/*-----Dimensions-----*/
+
+$desktop-min-width: 641px;
+$min-height: 568px;
+$min-width: 320px;
 
 /*-----Fonts-----*/
 
@@ -59,12 +65,6 @@ $semi-bold-font: 600;
 $bold-font: 700;
 
 /*-----Other-----*/
-
-
-/*Device support*/
-
-$min-height: 568px;
-$min-width: 320px;
 
 /*Animation*/
 

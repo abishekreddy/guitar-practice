@@ -1,5 +1,5 @@
-@import "./styles/reset.scss";
-@import "./styles/mixins.scss";
+@import "./styles/_reset.scss";
+@import "./styles/_mixins.scss";
 
 /*-----Layout-----*/
 
@@ -10,6 +10,7 @@ body {
 }
 
 body {
+  background: $primary-color;
   font: {
     family: $font-style;
     size: $primary-font-size;
