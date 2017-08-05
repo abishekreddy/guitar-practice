@@ -1,5 +1,7 @@
 @import "./styles/_reset.scss";
 @import "./styles/_mixins.scss";
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome';
 
 /*-----Layout-----*/
 
@@ -15,4 +17,11 @@ body {
     family: $font-style;
     size: $primary-font-size;
   }
+}
+
+
+/*-----Base-----*/
+
+button {
+  background: transparent;
 }
