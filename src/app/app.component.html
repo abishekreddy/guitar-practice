@@ -1,6 +1,17 @@
-<!-- <app-spinner></app-spinner> -->
-<div id="header"></div>
-<div id="body">
+<!--Spinner-->
+<app-spinner *ngIf="showSpinner"></app-spinner>
+<!--Navbar-->
+<div id="navbar-open-button" (click)="navbarToggleButtonClicked(true)" *ngIf="!showNavbar">
+  <div class="navbar-open-button-bar top"></div>
+  <div class="navbar-open-button-bar middle"></div>
+  <div class="navbar-open-button-bar bottom"></div>
+</div>
+<div id="navbar-close-button" (click)="navbarToggleButtonClicked(false)" *ngIf="showNavbar">
+  <div class="navbar-close-button-bar left"></div>
+  <div class="navbar-close-button-bar right"></div>
+</div>
+<div id="navbar" (mouseleave)="navbarToggleButtonClicked(false)" (mouseover)="navbarToggleButtonClicked(true)" [ngClass]="{'open':showNavbar}"></div>
+<!--Body content-->
+<div id="content">
   <router-outlet></router-outlet>
 </div>
-<div id="navbar"></div>

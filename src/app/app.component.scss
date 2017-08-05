@@ -1,21 +1,16 @@
 @import "../styles/_mixins.scss";
 
-/*-----Navbar-----*/
+/*-----Body content-----*/
 
-#body {
+#content {
   height: 100%;
   padding: 20px;
-}
-
-@media screen and (max-width: $desktop-min-width) {
-  #body {
-    width: 100%;
-  }
+  width: 100%;
+  z-index: 1000;
 }
 
 @media screen and (min-width: $desktop-min-width) {
-  #body {
-    /*Adjusting for navbar*/
+  #content {
     left: 60px;
     position: absolute;
     width: calc(100% - 60px);
@@ -26,32 +21,84 @@
 /*-----Navbar-----*/
 
 #navbar {
-  @include setTransition(width .2s linear);
+  @include setTransition(all .1s linear);
   background: $secondary-color;
   height: 100%;
+  left: calc(-100% - 5px);
   overflow: hidden;
   position: fixed;
   top: 0;
-}
-
-@media screen and (max-width: $desktop-min-width) {
-  #navbar {
-    /*Hiding navbar when not open. Additional 5px to hide box shadow*/
-    left: -255px;
-    width: 250px;
-    &.open {
-      left: 0;
-    }
+  width: 100%;
+  z-index: 1500;
+  &.open {
+    left: 0;
   }
 }
 
 @media screen and (min-width: $desktop-min-width) {
   #navbar {
-    /*Adjusting for navbar*/
     left: 0;
     width: 60px;
-    &:hover {
+    &.open {
       width: 250px;
+    }
+  }
+}
+
+
+/*Navbar trigger*/
+
+#navbar-open-button,
+#navbar-close-button {
+  @include setTransition(.1s);
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  width: 30px;
+  z-index: 2000;
+}
+
+.navbar-open-button-bar,
+.navbar-close-button-bar {
+  height: 4px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.navbar-open-button-bar {
+  background: $secondary-color;
+  transform: rotate(-45deg);
+  &.top {
+    width: 50%;
+  }
+  &.bottom {
+    width: 50%;
+    margin-left: 50%;
+  }
+}
+
+.navbar-close-button-bar {
+  background: $primary-color;
+  &.left {
+    transform: translateY(8px) rotate(-45deg);
+  }
+  &.right {
+    transform: rotate(45deg);
+  }
+}
+
+@media screen and (min-width: $desktop-min-width) {
+  #navbar-open-button {
+    left: 15px;
+    .navbar-open-button-bar {
+      background: $primary-color;
+    }
+  }
+  #navbar-close-button {
+    left: 200px;
+    .navbar-close-button-bar {
+      background: $primary-color;
     }
   }
 }
