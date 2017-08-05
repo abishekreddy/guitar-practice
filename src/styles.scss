@@ -24,4 +24,17 @@ body {
 
 button {
   background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+h1 {
+  font-size: $primary-font-size;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: $desktop-min-width) {
+  h1 {
+    @include setFontSize($s-font-multiplier);
+  }
 }

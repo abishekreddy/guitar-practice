@@ -1,9 +1,11 @@
 @import "_variables.scss";
 
+/*-----Mixins-----*/
+
 @mixin setBoxShadow($value) {
-    -moz-box-shadow: $value;
-    -webkit-box-shadow: $value;
-    box-shadow: $value;
+  -moz-box-shadow: $value;
+  -webkit-box-shadow: $value;
+  box-shadow: $value;
 }
 
 @mixin setColors($background-color) {
@@ -26,9 +28,11 @@
 }
 
 @mixin setSplashScreen() {
+  align-items: center;
   display: flex;
-  flex-direction: column;
+  height: 100%;
   justify-content: center;
+  width: 100%;
 }
 
 @mixin setTextOverflow($value) {
@@ -39,8 +43,8 @@
 }
 
 @mixin setTransition($value) {
-    -moz-transition: $value;
-    -o-transition: $value;
-    -webkit-transition: $value;
-    transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  -webkit-transition: $value;
+  transition: $value;
 }

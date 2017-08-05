@@ -22,4 +22,4 @@ const appRoutes: Routes = [
         StrummingComponent
     ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

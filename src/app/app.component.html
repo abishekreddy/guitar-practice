@@ -13,8 +13,5 @@
 <div id="navbar" (mouseleave)="navbarToggleButtonClicked(false)" (mouseover)="navbarToggleButtonClicked(true)" [ngClass]="{'open':showNavbar}"></div>
 <!--Body content-->
 <div id="body">
-  <h1 id="body-header"></h1>
-  <div id="body-content">
-    <router-outlet></router-outlet>
-  </div>
+  <router-outlet></router-outlet>
 </div>

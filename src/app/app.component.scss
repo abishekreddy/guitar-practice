@@ -7,10 +7,6 @@
   padding: 20px;
   width: 100%;
   z-index: 1000;
-  &-header {
-    font-size: $primary-font-size;
-    margin-bottom: 20px;
-  }
 }
 
 @media screen and (min-width: $desktop-min-width) {
@@ -19,9 +15,6 @@
     padding: 50px;
     position: absolute;
     width: calc(100% - 60px);
-    &-header {
-      @include setFontSize($s-font-multiplier);
-    }
   }
 }
 
