@@ -23,8 +23,12 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=1);
     /* IE6-9 */
     height: 5px;
+    max-width: 250px;
     outline: none;
-    width: 250px;
+    width: 100%;
+    &.active::-ms-fill-lower{
+        background:green;
+    }
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       cursor: pointer;
@@ -59,7 +63,7 @@
   }
   @media screen and (min-width: $desktop-min-width) {
     #timer-range {
-      width: 500px;
+      max-width: 750px;
     }
   }
 }
@@ -76,5 +80,8 @@
     height: 30px;
     margin: 0 10px;
     width: 30px;
+    &:disabled {
+      background: grey;
+    }
   }
 }
