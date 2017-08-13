@@ -7,15 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showNavbar = false;
-  showSpinner = false;
 
-  //TODO: Remove
-  featureDefaults = {
-    default: 10,
-    max: 20,
-    min: 0,
-    step: 1
-  };
   navbarToggleButtonClicked(showNavbar): void {
     this.showNavbar = showNavbar;
   }

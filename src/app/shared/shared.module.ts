@@ -8,6 +8,6 @@ import { AppTimerComponent } from './app-timer/app-timer.component';
 @NgModule({
   imports: [CommonModule, FormsModule],
   declarations: [AppSpinnerComponent, AppTimerComponent],
-  exports: [AppSpinnerComponent, AppTimerComponent]
+  exports: [CommonModule, FormsModule, AppSpinnerComponent, AppTimerComponent]
 })
 export class SharedModule { }

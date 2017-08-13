@@ -1,0 +1,20 @@
+@import "../../styles/_variables.scss";
+
+/*-----Strumming-----*/
+
+#pattern-container {
+  text-align: center;
+}
+
+.pattern {
+  font-size: 75px;
+  &:nth-child(odd) {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: $desktop-min-width) {
+  .pattern {
+    font-size: 150px;
+  }
+}

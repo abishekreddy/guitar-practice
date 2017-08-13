@@ -13,6 +13,5 @@
 <div id="navbar" (mouseleave)="navbarToggleButtonClicked(false)" (mouseover)="navbarToggleButtonClicked(true)" [ngClass]="{'open':showNavbar}"></div>
 <!--Body content-->
 <div id="body">
-  <app-timer [timer]="featureDefaults"></app-timer>
   <router-outlet></router-outlet>
 </div>

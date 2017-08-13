@@ -1,0 +1,9 @@
+<h1>Strumming</h1>
+<div id="pattern-container" *ngIf="strumPattern">
+    <span class="pattern" *ngFor="let strum of strumPattern">
+        <i aria-hidden="true" class="fa" [ngClass]="{'fa-long-arrow-up': strum.direction === 'up', 'fa-long-arrow-down': strum.direction === 'down'}" *ngIf="!strum.isEmptyNote"></i>
+    </span>
+</div>
+<div id="controls-container">
+  <app-timer [timer]="featureDefaults" (change)="displayStrumPattern()"></app-timer>
+</div>

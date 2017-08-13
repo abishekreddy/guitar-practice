@@ -13,7 +13,7 @@ export class AppTimerComponent implements OnDestroy, OnInit {
   @Input() timer: FeatureTimer;
   value: number;
   wasStarted: boolean;
-  @Output() change: EventEmitter<any> = new EventEmitter();
+  @Output() change = new EventEmitter();
   /*Private variables*/
   private timerSubscription;
   private userSelection: FeatureTimer;
