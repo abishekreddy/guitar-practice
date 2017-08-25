@@ -8,10 +8,10 @@ import { ChordComponent } from './../chord/chord.component';
 import { StrummingComponent } from './../strumming/strumming.component';
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/chords', pathMatch: 'full' },
-    { path: 'chords', component: ChordComponent },
-    { path: 'strumming', component: StrummingComponent },
-    { path: '**', component: PageNotFoundComponent }
+    { path: '', redirectTo: '/chords', pathMatch: 'full', data: { name: 'Home' } },
+    { path: 'chords', component: ChordComponent, data: { name: 'Chords' } },
+    { path: 'strumming', component: StrummingComponent, data: { name: 'Strumming' } },
+    { path: '**', component: PageNotFoundComponent, data: { name: 'Page not found' } }
 ];
 
 @NgModule({
