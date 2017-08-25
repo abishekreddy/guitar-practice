@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showNavbar = false;
+  showSpinner = false;
 
   navbarToggleButtonClicked(showNavbar): void {
     this.showNavbar = showNavbar;

@@ -26,8 +26,8 @@
     max-width: 250px;
     outline: none;
     width: 100%;
-    &.active::-ms-fill-lower{
-        background:green;
+    &.active::-ms-fill-lower {
+      background: green;
     }
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -59,6 +59,11 @@
       /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1);
       /* IE6-9 */
+    }
+  }
+  @media screen and (min-width: $tablet-min-width) {
+    #timer-range {
+      max-width: 500px;
     }
   }
   @media screen and (min-width: $desktop-min-width) {

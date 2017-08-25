@@ -30,7 +30,12 @@ button {
 
 h1 {
   font-size: $primary-font-size;
-  margin-bottom: 20px;
+}
+
+@media screen and (min-width: $tablet-min-width) {
+  h1 {
+    @include setFontSize($xs-font-multiplier);
+  }
 }
 
 @media screen and (min-width: $desktop-min-width) {

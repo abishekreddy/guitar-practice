@@ -3,18 +3,37 @@
 /*-----Strumming-----*/
 
 #pattern-container {
-  text-align: center;
+  align-items: center;
+  display: flex;
+  height: 80%;
+  justify-content: center;
+}
+
+#controls-container {
+  height: 20%;
 }
 
 .pattern {
-  font-size: 75px;
-  &:nth-child(odd) {
+  font-size: 50px;
+  &:nth-child(2n+3) {
     margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: $tablet-min-width) {
+  .pattern {
+    font-size: 100px;
+    &:nth-child(2n+3) {
+      margin-left: 35px;
+    }
   }
 }
 
 @media screen and (min-width: $desktop-min-width) {
   .pattern {
     font-size: 150px;
+    &:nth-child(2n+3) {
+      margin-left: 50px;
+    }
   }
 }

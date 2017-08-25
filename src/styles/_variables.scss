@@ -10,7 +10,8 @@ $secondary-color: #171d1f;
 
 /*-----Dimensions-----*/
 
-$desktop-min-width: 641px;
+$tablet-min-width: 768px;
+$desktop-min-width: 992px;
 $min-height: 568px;
 $min-width: 320px;
 
@@ -33,7 +34,7 @@ $primary-font-size: 28px;
 /*Font size multipliers*/
 
 $xxs-font-multiplier: 0.5;
-$xs-font-multiplier: 0.75;
+$xs-font-multiplier: 1.2;
 $s-font-multiplier: 1.5;
 $m-font-multiplier: 2;
 $l-font-multiplier: 4;
@@ -42,7 +43,7 @@ $xxl-font-multiplier: 8;
 
 /*
     Font size multiplier reference:
-    $xxs-font-multiplier: 21px;
+    $xxs-font-multiplier: 14px;
     $xs-font-multiplier: 34px;
     $s-font-multiplier: 42px;
     $m-font-multiplier: 56px;

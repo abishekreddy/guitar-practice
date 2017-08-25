@@ -12,6 +12,11 @@
 </button>
 <div id="navbar" (mouseleave)="navbarToggleButtonClicked(false)" (mouseover)="navbarToggleButtonClicked(true)" [ngClass]="{'open':showNavbar}"></div>
 <!--Body content-->
-<div id="body">
-  <router-outlet></router-outlet>
+<div id="content">
+  <div id="content-header">
+      <h1>Strumming</h1>
+  </div>
+  <div id="content-body">
+    <router-outlet></router-outlet>
+  </div>
 </div>

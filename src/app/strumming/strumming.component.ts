@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { FeatureTimer } from './../shared/app-timer/feature-timer';
-import { Strum } from './strum';
 
 @Component({
   templateUrl: './strumming.component.html',
@@ -14,20 +13,18 @@ export class StrummingComponent {
     min: 0,
     step: 1
   };
-  strumPattern: Strum[];
+  strumPattern: string[];
 
   displayStrumPattern() {
-    this.strumPattern = new Array<Strum>();
-    let strum: Strum = null;
+    this.strumPattern = new Array<string>();
     for (let i = 0; i < 8; i++) {
       const number = Math.floor(Math.random() * 2);
       const direction = number === 0 ? 'down' : 'up';
-      if (i !== 0 && direction === this.strumPattern[i - 1].direction) {
-        strum = { direction: '', isEmptyNote: true };
+      if (i !== 0 && direction === this.strumPattern[i - 1]) {
+        this.strumPattern.push('');
       } else {
-        strum = { direction: direction, isEmptyNote: false };
+        this.strumPattern.push(direction);
       }
-      this.strumPattern.push(strum);
     }
   }
 }

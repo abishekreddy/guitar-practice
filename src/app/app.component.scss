@@ -2,19 +2,33 @@
 
 /*-----Body content-----*/
 
-#body {
+#content {
   height: 100%;
-  padding: 20px;
+  padding: 0 20px;
   width: 100%;
   z-index: 1000;
+  &-body {
+    height: calc(100% - 75px);
+  }
+  &-header {
+    align-items: center;
+    display: flex;
+    height: 75px;
+  }
 }
 
 @media screen and (min-width: $desktop-min-width) {
-  #body {
+  #content {
     left: 60px;
-    padding: 50px;
+    padding: 0 50px;
     position: absolute;
     width: calc(100% - 60px);
+    &-body {
+      height: calc(100% - 100px);
+    }
+    &-header {
+      height: 100px;
+    }
   }
 }
 
