@@ -1,0 +1,7 @@
+<div id="chord-container" *ngIf="chord !== ''">
+  <label id="chord-name">{{chord}}</label>
+  <img alt="{{chord}} chord" id="chord-image" src="./../../assets/chords/{{chord}}.png"/>
+</div>
+<div id="controls-container">
+  <app-timer [timer]="featureDefaults" (change)="displayChord()"></app-timer>
+</div>

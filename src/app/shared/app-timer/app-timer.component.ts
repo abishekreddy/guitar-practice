@@ -29,7 +29,9 @@ export class AppTimerComponent implements OnDestroy, OnInit {
   play() {
     if (!this.wasStarted) {
       this.userSelection = Object.assign({}, this.timer);
-      this.value *= 60;
+      if (this.timer.format === 'minutes') {
+        this.value *= 60;
+      }
       this.timer.min = 0;
       this.timer.max = this.value;
       this.timer.step = 1;
@@ -38,10 +40,9 @@ export class AppTimerComponent implements OnDestroy, OnInit {
     }
     this.timerSubscription = Observable.interval(1000).subscribe(t => {
       this.value -= 1;
-      if(this.value === 0)
-        {
-          this.reset();
-        }
+      if (this.value === 0) {
+        this.reset();
+      }
     });
     this.isPlaying = true;
   }

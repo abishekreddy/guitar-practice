@@ -8,9 +8,10 @@ import { FeatureTimer } from './../shared/app-timer/feature-timer';
 })
 export class StrummingComponent {
   featureDefaults: FeatureTimer = {
-    default: 10,
-    max: 20,
-    min: 0,
+    default: 30,
+    format: 'seconds',
+    max: 120,
+    min: 5,
     step: 1
   };
   strumPattern: string[];

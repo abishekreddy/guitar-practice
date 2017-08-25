@@ -2,7 +2,7 @@
 
 /*-----Strumming-----*/
 
-#pattern-container {
+#chord-container {
   align-items: center;
   display: flex;
   height: 75%;
@@ -13,27 +13,31 @@
   height: 25%;
 }
 
-.pattern {
+#chord-name {
   font-size: 50px;
-  &:nth-child(2n+3) {
-    margin-left: 20px;
-  }
+  margin-right: 20px;
+}
+
+#chord-image {
+  height: 200px;
 }
 
 @media screen and (min-width: $tablet-min-width) {
-  .pattern {
+  #chord-name {
     font-size: 100px;
-    &:nth-child(2n+3) {
-      margin-left: 35px;
-    }
+    margin-right: 35px;
+  }
+  #chord-image {
+    height: 300px;
   }
 }
 
 @media screen and (min-width: $desktop-min-width) {
-  .pattern {
+  #chord-name {
     font-size: 150px;
-    &:nth-child(2n+3) {
-      margin-left: 50px;
-    }
+    margin-right: 50px;
+  }
+  #chord-image {
+    height: 300px;
   }
 }
