@@ -1,0 +1,7 @@
+<div id="controls-container">
+  <app-timer [timer]="featureDefaults" (trigger)="displayNote()"></app-timer>
+</div>
+<div id="note-container">
+  <img alt="Trebble clef" class="note-image" src="./../../assets/notes/treble.png" />
+  <img alt="Note {{note.name}}" class="note-image" [src]="note.image" *ngFor="let note of notes"/>
+</div>

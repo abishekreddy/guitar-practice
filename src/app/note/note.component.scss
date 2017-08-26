@@ -1,0 +1,28 @@
+@import "../../styles/_variables.scss";
+
+/*-----Strumming-----*/
+
+#controls-container {
+  height: 10%;
+}
+
+#note-container {
+  height: 90%;
+  overflow-y: auto;
+}
+
+.note-image {
+  height: 150px;
+}
+
+@media screen and (min-width: $tablet-min-width) {
+  .note-image {
+    height: 175px;
+  }
+}
+
+@media screen and (min-width: $desktop-min-width) {
+  .note-image {
+    height: 200px;
+  }
+}
