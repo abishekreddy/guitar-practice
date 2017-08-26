@@ -13,6 +13,8 @@ body {
 
 body {
   background: $primary-color;
+  min-height: $min-height;
+  min-width: $min-width;
   font: {
     family: $font-style;
     size: $primary-font-size;
