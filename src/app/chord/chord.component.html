@@ -3,5 +3,5 @@
   <img alt="{{chord}} chord" id="chord-image" src="./../../assets/chords/{{chord}}.png"/>
 </div>
 <div id="controls-container">
-  <app-timer [timer]="featureDefaults" (change)="displayChord()"></app-timer>
+  <app-timer [timer]="featureDefaults" (trigger)="displayChord()"></app-timer>
 </div>

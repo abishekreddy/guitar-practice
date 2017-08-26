@@ -11,9 +11,9 @@ export class AppTimerComponent implements OnDestroy, OnInit {
   /*Public variables*/
   isPlaying: boolean;
   @Input() timer: FeatureTimer;
+  @Output() trigger = new EventEmitter();
   value: number;
   wasStarted: boolean;
-  @Output() change = new EventEmitter();
   /*Private variables*/
   private timerSubscription;
   private userSelection: FeatureTimer;
@@ -36,7 +36,7 @@ export class AppTimerComponent implements OnDestroy, OnInit {
       this.timer.max = this.value;
       this.timer.step = 1;
       this.wasStarted = true;
-      this.change.emit();
+      this.trigger.emit();
     }
     this.timerSubscription = Observable.interval(1000).subscribe(t => {
       this.value -= 1;
@@ -48,7 +48,7 @@ export class AppTimerComponent implements OnDestroy, OnInit {
   }
   reset() {
     this.stopTimer();
-    this.change.emit();
+    this.trigger.emit();
     this.value = this.timer.max;
     if (this.isPlaying) {
       this.play();
