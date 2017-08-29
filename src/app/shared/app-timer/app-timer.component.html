@@ -1,5 +1,5 @@
 <div id="timer-container">
-  <input [attr.disabled]="isPlaying?'true':null" [class.active]="isPlaying" defaultValue="{{timer.default}}" id="timer-range" max="{{timer.max}}" min="{{timer.min}}" name="range" [(ngModel)]="value" step="{{timer.step}}" type="range" />
+  <input [attr.disabled]="wasStarted?'true':null" [class.active]="isPlaying" defaultValue="{{timer.default}}" id="timer-range" max="{{timer.max}}" min="{{timer.min}}" name="range" [(ngModel)]="value" step="{{timer.step}}" type="range" />
 </div>
 <div id="timer-controls-container">
   <button [attr.disabled]="!wasStarted?'true':null" class="timer-control" (click)="stop()"><i class="fa fa-stop" aria-hidden="true"></i></button>

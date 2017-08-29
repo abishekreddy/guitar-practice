@@ -11,14 +11,18 @@ import { Notes } from './notes';
 export class NoteComponent {
   featureDefaults: FeatureTimer = {
     default: 30,
-    format: 'seconds',
+    format: 'bpm',
     max: 120,
-    min: 5,
-    step: 1
+    min: 10,
+    step: 5
   };
   notes: Note[];
 
   constructor() {
+    this.notes = new Array<Note>();
+  }
+
+  clearContainer() {
     this.notes = new Array<Note>();
   }
 

@@ -1,5 +1,5 @@
 <div id="controls-container">
-  <app-timer [timer]="featureDefaults" (trigger)="displayNote()"></app-timer>
+  <app-timer [timer]="featureDefaults" (clear)="clearContainer()" (trigger)="displayNote()"></app-timer>
 </div>
 <div id="note-container">
   <img alt="Trebble clef" class="note-image" src="./../../assets/notes/treble.png" />

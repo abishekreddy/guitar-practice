@@ -8,63 +8,90 @@ import { Observable } from 'rxjs/Rx';
   styleUrls: ['./app-timer.component.scss']
 })
 export class AppTimerComponent implements OnDestroy, OnInit {
-  /*Public variables*/
+  /*-----Public variables-----*/
+  @Output() clear = new EventEmitter();
   isPlaying: boolean;
   @Input() timer: FeatureTimer;
   @Output() trigger = new EventEmitter();
   value: number;
   wasStarted: boolean;
-  /*Private variables*/
+
+  /*-----Private variables-----*/
   private timerSubscription;
   private userSelection: FeatureTimer;
 
-  /*Public methods*/
+  /*-----Public methods-----*/
   ngOnInit() {
     this.value = this.timer.default;
   }
+
   pause() {
-    this.stopTimer();
     this.isPlaying = false;
   }
+
   play() {
     if (!this.wasStarted) {
-      this.userSelection = Object.assign({}, this.timer);
-      if (this.timer.format === 'minutes') {
-        this.value *= 60;
-      }
-      this.timer.min = 0;
-      this.timer.max = this.value;
-      this.timer.step = 1;
-      this.wasStarted = true;
-      this.trigger.emit();
+      this.setupTimer();
     }
-    this.timerSubscription = Observable.interval(1000).subscribe(t => {
-      this.value -= 1;
-      if (this.value === 0) {
-        this.reset();
-      }
-    });
     this.isPlaying = true;
   }
+
   reset() {
-    this.stopTimer();
-    this.trigger.emit();
-    this.value = this.timer.max;
-    if (this.isPlaying) {
-      this.play();
+    if (this.timer.format !== 'bpm') {
+      this.trigger.emit();
+      this.value = this.timer.max;
+    } else {
+      this.clear.emit();
     }
   }
+
   stop() {
     this.stopTimer();
-    this.timer = Object.assign({}, this.userSelection);
+    if (this.timer.format !== 'bpm') {
+      this.timer = Object.assign({}, this.userSelection);
+    } else {
+      this.clear.emit();
+    }
     this.value = this.timer.default;
     this.isPlaying = false;
     this.wasStarted = false;
   }
+
   ngOnDestroy() {
     this.stopTimer();
   }
-  /*Private methods*/
+
+  /*-----Private methods-----*/
+  private setupTimer() {
+    let timerInterval = 1000;
+    if (this.timer.format !== 'bpm') {
+      this.userSelection = Object.assign({}, this.timer);
+      this.timer.min = 0;
+      this.timer.max = this.value;
+      this.timer.step = 1;
+      if (this.timer.format === 'minutes') {
+        this.value *= 60;
+      }
+    } else {
+      timerInterval /= (this.value / 60);
+    }
+    this.wasStarted = true;
+    this.trigger.emit();
+    this.timerSubscription = Observable.interval(timerInterval).subscribe(t => {
+      if (!this.isPlaying) {
+        return;
+      }
+      if (this.timer.format !== 'bpm') {
+        this.value -= 1;
+        if (this.value === 0) {
+          this.reset();
+        }
+      } else {
+        this.trigger.emit();
+      }
+    });
+  }
+
   private stopTimer() {
     if (this.timerSubscription) {
       this.timerSubscription.unsubscribe();
