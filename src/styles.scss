@@ -45,3 +45,25 @@ h1 {
     @include setFontSize($s-font-multiplier);
   }
 }
+
+
+/*-----Scrollbar-----*/
+
+// For Google Chrome
+ ::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $secondary-color;
+}
+
+::-webkit-scrollbar-track {
+  background: $primary-color;
+}
+
+// For Internet Explorer
+body {
+  scrollbar-face-color: $secondary-color;
+  scrollbar-track-color: $primary-color;
+}

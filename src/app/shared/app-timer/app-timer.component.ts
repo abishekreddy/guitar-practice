@@ -9,6 +9,7 @@ import { Observable } from 'rxjs/Rx';
 })
 export class AppTimerComponent implements OnDestroy, OnInit {
   /*-----Public variables-----*/
+  
   @Output() clear = new EventEmitter();
   isPlaying: boolean;
   @Input() timer: FeatureTimer;
@@ -17,10 +18,12 @@ export class AppTimerComponent implements OnDestroy, OnInit {
   wasStarted: boolean;
 
   /*-----Private variables-----*/
+
   private timerSubscription;
   private userSelection: FeatureTimer;
 
   /*-----Public methods-----*/
+
   ngOnInit() {
     this.value = this.timer.default;
   }
@@ -62,6 +65,7 @@ export class AppTimerComponent implements OnDestroy, OnInit {
   }
 
   /*-----Private methods-----*/
+
   private setupTimer() {
     let timerInterval = 1000;
     if (this.timer.format !== 'bpm') {

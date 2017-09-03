@@ -27,7 +27,6 @@
     outline: none;
     width: 100%;
     &.active::-ms-fill-lower {
-      background: green;
       cursor: default;
     }
     &::-webkit-slider-thumb {
