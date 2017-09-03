@@ -9,7 +9,7 @@ import { NoteComponent } from './../note/note.component';
 import { StrummingComponent } from './../strumming/strumming.component';
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/chords', pathMatch: 'full', data: { name: 'Home' } },
+    { path: '', redirectTo: '/notes', pathMatch: 'full', data: { name: 'Home' } },
     { path: 'chords', component: ChordComponent, data: { name: 'Chords' } },
     { path: 'notes', component: NoteComponent, data: { name: 'Notes' } },
     { path: 'strumming', component: StrummingComponent, data: { name: 'Strumming' } },
