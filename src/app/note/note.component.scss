@@ -3,25 +3,39 @@
 /*-----Strumming-----*/
 
 #controls-container {
-  height: 10%;
+  height: 15%;
 }
 
 #note-container {
-  height: 90%;
+  height: 85%;
   overflow-y: auto;
 }
 
 .note-image {
-  height: 150px;
+  height: 100px;
 }
 
 @media screen and (min-width: $tablet-min-width) {
+  #controls-container {
+    height: 10%;
+  }
+  #note-container {
+    height: 90%;
+    overflow-y: auto;
+  }
   .note-image {
     height: 175px;
   }
 }
 
 @media screen and (min-width: $desktop-min-width) {
+  #controls-container {
+    height: 10%;
+  }
+  #note-container {
+    height: 90%;
+    overflow-y: auto;
+  }
   .note-image {
     height: 200px;
   }

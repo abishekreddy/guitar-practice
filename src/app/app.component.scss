@@ -39,10 +39,12 @@
   @include setTransition(all .1s linear);
   background: $secondary-color;
   color: $primary-color;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  justify-content: center;
   left: calc(-100% - 5px);
   overflow: hidden;
-  padding-top: 100px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -70,7 +72,6 @@
 @media screen and (min-width: $desktop-min-width) {
   #navbar {
     left: 0;
-    padding-top: 150px;
     width: 60px;
     .navbar-item {
       margin-bottom: 50px;

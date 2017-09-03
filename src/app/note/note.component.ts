@@ -1,4 +1,4 @@
-import { Component, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 import { FeatureTimer } from './../shared/app-timer/feature-timer';
 import { Note } from './note';
@@ -8,7 +8,7 @@ import { Notes } from './notes';
   templateUrl: './note.component.html',
   styleUrls: ['./note.component.scss']
 })
-export class NoteComponent implements AfterViewChecked {
+export class NoteComponent {
   /*-----Public variables-----*/
 
   featureDefaults: FeatureTimer = {
@@ -41,9 +41,6 @@ export class NoteComponent implements AfterViewChecked {
   displayNote() {
     const number = Math.floor(Math.random() * (Notes.length));
     this.notes.push(Notes[number]);
-  }
-
-  ngAfterViewChecked() {
     this.scrollToBottom();
   }
 
