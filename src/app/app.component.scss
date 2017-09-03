@@ -38,13 +38,30 @@
 #navbar {
   @include setTransition(all .1s linear);
   background: $secondary-color;
+  color: $primary-color;
   height: 100%;
   left: calc(-100% - 5px);
   overflow: hidden;
+  padding-top: 100px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1500;
+  .navbar-item {
+    align-items: center;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    margin-bottom: 30px;
+    &-text {
+      margin-left: 20px;
+    }
+    &.active,
+    &:hover {
+      background: $primary-color;
+      color: $secondary-color;
+    }
+  }
   &.open {
     left: 0;
   }
@@ -53,7 +70,11 @@
 @media screen and (min-width: $desktop-min-width) {
   #navbar {
     left: 0;
+    padding-top: 150px;
     width: 60px;
+    .navbar-item {
+      margin-bottom: 50px;
+    }
     &.open {
       width: 250px;
     }

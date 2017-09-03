@@ -30,6 +30,10 @@ img {
     max-width: 100%;
 }
 
+:focus {
+    outline: 0;
+}
+    
 /*Adjust input styling*/
 button,
 input,

@@ -10,11 +10,24 @@
   <div class="navbar-close-button-bar left"></div>
   <div class="navbar-close-button-bar right"></div>
 </button>
-<div id="navbar" (mouseleave)="navbarToggleButtonClicked(false)" (mouseover)="navbarToggleButtonClicked(true)" [ngClass]="{'open':showNavbar}"></div>
+<div id="navbar" [ngClass]="{'open':showNavbar}">
+  <div class="navbar-item" routerLink="/notes" routerLinkActive="active">
+    <i class="fa fa-music" aria-hidden="true"></i>
+    <span class="navbar-item-text" *ngIf="showNavbar">Notes</span>
+  </div>
+  <div class="navbar-item" routerLink="/chords" routerLinkActive="active">
+    <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
+    <span class="navbar-item-text" *ngIf="showNavbar">Chords</span>
+  </div>
+  <div class="navbar-item" routerLink="/strumming" routerLinkActive="active">
+    <i class="fa fa-arrows-v" aria-hidden="true"></i>
+    <span class="navbar-item-text" *ngIf="showNavbar">Strumming</span>
+  </div>
+</div>
 <!--Body content-->
 <div id="content">
   <div id="content-header">
-      <h1>{{currentRoute}}</h1>
+    <h1>{{currentRoute}}</h1>
   </div>
   <div id="content-body">
     <router-outlet></router-outlet>
