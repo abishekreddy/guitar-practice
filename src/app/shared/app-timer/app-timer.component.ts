@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Rx';
 })
 export class AppTimerComponent implements OnDestroy, OnInit {
   /*-----Public variables-----*/
-  
+
   @Output() clear = new EventEmitter();
   isPlaying: boolean;
   @Input() timer: FeatureTimer;
