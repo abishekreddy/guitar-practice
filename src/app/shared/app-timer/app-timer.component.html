@@ -2,7 +2,7 @@
   <input [attr.disabled]="wasStarted?'true':null" [class.active]="isPlaying" defaultValue="{{timer.default}}" id="timer-range" max="{{timer.max}}" min="{{timer.min}}" name="range" [(ngModel)]="value" step="{{timer.step}}" type="range" />
 </div>
 <div id="timer-controls-container">
-  <output for="range" *ngIf="!wasStarted">{{value}}</output>
+  <output for="range" *ngIf="!wasStarted">{{value + ' ' + timer.format.toUpperCase()}}</output>
   <button class="timer-control" (click)="stop()" *ngIf="wasStarted"><i class="fa fa-stop" aria-hidden="true"></i></button>
   <button class="timer-control" (click)="play()" *ngIf="!isPlaying"><i class="fa fa-play" aria-hidden="true"></i></button>
   <button class="timer-control" (click)="pause()" *ngIf="isPlaying"><i class="fa fa-pause" aria-hidden="true"></i></button>
