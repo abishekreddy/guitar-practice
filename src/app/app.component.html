@@ -11,15 +11,15 @@
   <div class="navbar-close-button-bar right"></div>
 </button>
 <div id="navbar" [ngClass]="{'open':showNavbar}">
-  <div class="navbar-item" routerLink="/notes" routerLinkActive="active">
+  <div class="navbar-item" (click)="navbarToggleButtonClicked(false)" routerLink="/notes" routerLinkActive="active">
     <i class="fa fa-music" aria-hidden="true"></i>
     <span class="navbar-item-text" *ngIf="showNavbar">Notes</span>
   </div>
-  <div class="navbar-item" routerLink="/chords" routerLinkActive="active">
+  <div class="navbar-item" (click)="navbarToggleButtonClicked(false)" routerLink="/chords" routerLinkActive="active">
     <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
     <span class="navbar-item-text" *ngIf="showNavbar">Chords</span>
   </div>
-  <div class="navbar-item" routerLink="/strumming" routerLinkActive="active">
+  <div class="navbar-item" (click)="navbarToggleButtonClicked(false)" routerLink="/strumming" routerLinkActive="active">
     <i class="fa fa-arrows-v" aria-hidden="true"></i>
     <span class="navbar-item-text" *ngIf="showNavbar">Strumming</span>
   </div>
